@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
- resources :products
+  # makes sure that the root of the website is /products/
+  root 'products#index'
+  resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
