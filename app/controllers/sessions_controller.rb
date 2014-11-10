@@ -8,6 +8,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to products_url, notice: "Logged in!"
     else
+      # The flash is a special part of the session which is cleared with each request. This means that values stored there will only be available in the next request, which is useful for storing flash alerts or flash notices. It is accessed in much the same way as the session, like a hash.
+      flash.now[:alert] = "Invalid email or password"
       render "new"
     end
   end
