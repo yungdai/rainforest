@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   # appropriate routes for new users.  Makes sure that you can only use the new and create commands for the resources
   resources :users, only: [:new, :create]
 
+
+  # appropriate routes for sessions.  Makes sure that you can only use new, create, and destroy resources.
+
+  resources :sessions, only: [:new, :create, :destroy]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
