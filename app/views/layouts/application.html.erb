@@ -8,13 +8,14 @@
 </head>
 
 <body>
+<%= yield %>
+
 <% if flash[:notice] %>
     <p id="notice"><%= flash[:notice] %></p>
 <% end %>
 <% if flash[:alert] %>
     <p id="alert"><%= flash[:alert] %></p>
-
-<%= yield %>
+<% end %>
 
 <!-- HTML that adds logic to display 'Signed in as' or Login or Sign up' in the application view. -->
 <p class="userinfo">
@@ -23,9 +24,7 @@
   <% else %>
       <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
   <% end %>
-<% end %>
 
-
-    </p>
+ </p>
 </body>
 </html>
