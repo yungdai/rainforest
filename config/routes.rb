@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+
   # makes sure that the root of the website is /products/
   root 'products#index'
   resources :products
+
+  # appropriate routes for new users.  Makes sure that you can only use the new and create commands for the resources
+  resources :users, only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
