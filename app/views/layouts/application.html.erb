@@ -11,7 +11,7 @@
 <%= yield %>
 
 </body>
-</html>
+
 
 <body>
 <% if flash[:notice] %>
@@ -22,5 +22,14 @@
 <% end %>
 
 <%= yield %>
+
+<!-- HTML that adds logic to display 'Signed in as' or Login or Sign up' in the application view. -->
+    <p class="userinfo">
+      <% if current_user %>
+          Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+      <% else %>
+          <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+      <% end %>
+    </p>
 </body>
 </html>
