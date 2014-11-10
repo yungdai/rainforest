@@ -1,4 +1,7 @@
 class Product < ActiveRecord::Base
+  # association to the
+  has_many :reviews
+  has_many :users, through: :reviews
   # This makes sure that you validate that there is data in description and name and makes
   # sure that the price has a numerical integer value
   validates :description, :name, presence: true
