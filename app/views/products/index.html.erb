@@ -5,10 +5,5 @@
 <%= link_to "New Product", "/products/new" %>
 
 
-<!-- This is located in the products/index.html.erb file to display the products -->
-<% @products.each do |product| %>
-    <p><%= product.name %>, <%= product.description %></p>
-    <%= product.price_in_cents %>
-    <%= link_to "Edit Product", "/products/#{product.id}/edit"%>
-
-<% end %>
+<!-- This is located in the products/_productinfo.html.erb partial file to display the products -->
+<%= render 'productinfo' %>

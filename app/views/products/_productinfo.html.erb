@@ -1,0 +1,6 @@
+<% @products.each do |product| %>
+    <p><%= product.name %>, <%= product.description %></p>
+    <p>$<%= product.formatted_price %></p>
+    <p><%= link_to "Edit Product", "/products/#{product.id}/edit"%></p>
+    <hr>
+<% end %>
