@@ -6,12 +6,11 @@
 <p>$<%= @product.formatted_price %></p>
 
 
-
-<% if current_user %>
+<%= current_user.inspect %> <%= @product.user.inspect %>
+<% if current_user == @product.user %>
     <%= link_to "Edit", "/products/#{@product.id}/edit"%> |
     <%= link_to "Delete", @product, method: :delete, data: {confirm: "Are you sure you want to delete this product?"}  %>
     <h3>Reviews</h3>
-
     <p>Reviews for <%= @product.name %></p>
 
     <% @product.reviews.each do |review| %>
