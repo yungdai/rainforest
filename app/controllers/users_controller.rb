@@ -9,6 +9,8 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to products_url, notice: "Signed up!"
     else
+      # send back to create new user page with a flash saying "Uh Oh! Something bad happened."
+      flash.now[:alert] = "Uh oh! Something bad happened."
       render "new"
     end
   end

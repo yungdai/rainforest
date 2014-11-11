@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
   before_filter :ensure_logged_in, only: [:create, :destroy]
 
   def show
+    # params[:review_id] will always be set
     @review = Review.find(params[:id])
   end
 

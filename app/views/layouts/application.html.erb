@@ -7,24 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
-<%= yield %>
+    <body>
 
-<% if flash[:notice] %>
-    <p id="notice"><%= flash[:notice] %></p>
-<% end %>
-<% if flash[:alert] %>
-    <p id="alert"><%= flash[:alert] %></p>
-<% end %>
+        <%= yield %>
 
-<!-- HTML that adds logic to display 'Signed in as' or Login or Sign up' in the application view. -->
-<p class="userinfo">
-  <% if current_user %>
-     Signed in as <%= current_user.username %> with email address <%= current_user.email %>. <%= link_to "Log out", session_path("current"),:method => :delete %>
-  <% else %>
-      <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-  <% end %>
+        <!-- this is the flash notice for the application -->
+        <% if flash[:notice] %>
+            <p id="notice"><%= flash[:notice] %></p>
+        <% end %>
+        <% if flash[:alert] %>
+            <p id="alert"><%= flash[:alert] %></p>
+        <% end %>
 
- </p>
-</body>
+        <!-- HTML that adds logic to display 'Signed in as' or Login or Sign up' in the application view. -->
+        <p class="userinfo">
+          <% if current_user %>
+             Signed in as <%= current_user.username %> with email address <%= current_user.email %>. <%= link_to "Log out", session_path("current"),:method => :delete %>
+          <% else %>
+              <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+          <% end %>
+
+         </p>
+    </body>
 </html>
