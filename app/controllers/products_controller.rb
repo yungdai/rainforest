@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-
+    # If the a user is logged it he should be able to review a product.
     if current_user
       @review = @product.reviews.build
     end
