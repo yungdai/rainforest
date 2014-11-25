@@ -5,6 +5,13 @@ class ProductsController < ApplicationController
                 else
                   Product.all
                 end
+
+    @products = Product.order('products.created_at DESC').page(params[:page])
+
+    respond_to do |format|
+      format.js # allows controller to respond to JavaScript
+      format.html
+    end
     if request.xhr?
       render 'productinfo'
     end
