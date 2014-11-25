@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1756704213">
+  <component name="DataSourceManagerImpl" format="xml" hash="889979827">
     <data-source source="LOCAL" name="Rails rainforest: development" uuid="a69dfd5d-8f7b-4a9a-91d1-e85f0decb9d6">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:rainforest_development</jdbc-url>
-      <libraries />
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-9.3-1100.jdbc4.jar</url>
+        </library>
+      </libraries>
     </data-source>
     <data-source source="LOCAL" name="Rails rainforest: test" uuid="30e59fc9-d7d7-4b62-a681-9af0fbf0f626">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:rainforest_test</jdbc-url>
-      <libraries />
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-9.3-1100.jdbc4.jar</url>
+        </library>
+      </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails rainforest: production" uuid="6b96b41f-9439-4195-802d-85f718723557">
+    <data-source source="LOCAL" name="Rails rainforest: development [2]" uuid="39811103-04cc-4710-b3fe-453ec2dcf591">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:rainforest_production</jdbc-url>
-      <user-name>rainforest</user-name>
-      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddff8dfebdfe3dfe4dfecdfe5dff8dfefdff9dffedff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <jdbc-url>jdbc:postgresql:rainforest_development</jdbc-url>
       <libraries />
     </data-source>
   </component>
 </project>
-

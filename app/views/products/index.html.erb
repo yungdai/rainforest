@@ -2,6 +2,12 @@
 <h1>Product Directory</h1>
 <!-- this is a link to the /products/new.html.erb file -->
 
+<%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %>
+<% end %>
+
+
 <%= link_to "New Product", "/products/new" %>
 
 
