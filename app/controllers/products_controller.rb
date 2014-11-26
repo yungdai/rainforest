@@ -1,19 +1,16 @@
 class ProductsController < ApplicationController
   def index
     @products = if params[:search]
-                  Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
+                  # This line take the search text and makes it all lower case and query's the database that are equal to anything that contains that text in lowercase.
+                  Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%").page(params[:page])
                 else
-                  Product.all
+                  # Gets everything in order by the created at date created
+                  Product.order('products.created_at DESC').page(params[:page])
                 end
-
-    @products = Product.order('products.created_at DESC').page(params[:page])
 
     respond_to do |format|
       format.js # allows controller to respond to JavaScript
-      format.html
-    end
-    if request.xhr?
-      render 'productinfo'
+      format.html # allows controller to respond to HTML
     end
   end
 
