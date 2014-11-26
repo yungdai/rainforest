@@ -10,9 +10,17 @@
 
 <hr/>
 
-<ul id="products">
-  <!-- this will implicitly know that my _product.html.erb file will be looped to show all products -->
-  <%= render @products %>
+<ul>
+  <% @products.each do |product| %>
+      <%= link_to product_path(product.id) do %>
+          <h2>
+            <%= product.formatted_price %>
+            <%= product.name %>
+          </h2>
+      <% end %>
+      <!-- keeps the description to 100 characters or less -->
+      <p><%= truncate(product.description, length: 100) %></p>
+  <% end %>
 </ul>
 
 <!-- outputs several pagination links such as « First ‹ Prev ... 2 3 4 5 6 7 8 9 10 ... Next › Last » -->
