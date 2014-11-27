@@ -15,16 +15,17 @@
 
     <% @product.reviews.each do |review| %>
         <p>
-          <%= review.comment %>
-          <br/>
-          <% if review.user != nil %>
-              <!--This was crated from the products/show.html.erb -->
-            <em> by <%= review.user.email %></em>
-            Added on: <%= review.created_at %>
-           <!--  link_to "Delete", @review.destroy, method: :delete, data: {confirm: "Are you sure you want to delete this review?"} -->
-          <% end %>
-        </p>
-    <% end %>
+          <div class="review">
+            <div class="poster">
+              Posted by <%= review.user %> on <% review.created_at %>
+            </div>
+            <p class="comment">
+              <%= review.comment %>
+            </p>
+          </div>
+        <% end %>
+
+
 
 <!-- this is where you create a new review -->
     <h4>New Review</h4>

@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails rainforest: development" uuid="a69dfd5d-8f7b-4a9a-91d1-e85f0decb9d6">
-      <secret-storage>memory</secret-storage>
-    </data-source>
-    <data-source name="Rails rainforest: test" uuid="30e59fc9-d7d7-4b62-a681-9af0fbf0f626">
-      <secret-storage>memory</secret-storage>
-    </data-source>
-    <data-source name="Rails rainforest: development [2]" uuid="39811103-04cc-4710-b3fe-453ec2dcf591">
-      <secret-storage>memory</secret-storage>
-    </data-source>
+    <data-source name="Rails rainforest: development" uuid="a69dfd5d-8f7b-4a9a-91d1-e85f0decb9d6" />
+    <data-source name="Rails rainforest: test" uuid="30e59fc9-d7d7-4b62-a681-9af0fbf0f626" />
+    <data-source name="Rails rainforest: development [2]" uuid="39811103-04cc-4710-b3fe-453ec2dcf591" />
     <data-source name="Rails rainforest: production" uuid="db25efe7-bcee-4e13-ba88-a7b5b891d037">
-      <first-sync>true</first-sync>
       <user-name>rainforest</user-name>
       <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddff8dfebdfe3dfe4dfecdfe5dff8dfefdff9dffedff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
     </data-source>
