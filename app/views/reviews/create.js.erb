@@ -1,1 +1,1 @@
-alert("I’m responding to your request!");
+$("#review-list").append("<%= j(render(:partial => 'review', :locals => {:review => @review})) %>");

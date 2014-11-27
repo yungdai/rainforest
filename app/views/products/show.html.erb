@@ -12,25 +12,14 @@
     <h3>Reviews</h3>
 
     <p>Reviews for <%= @product.name %></p>
-
-    <% @product.reviews.each do |review| %>
-        <p>
-          <div class="review">
-            <div class="poster">
-              Posted by <%= review.user %> on <% review.created_at %>
-            </div>
-            <p class="comment">
-              <%= review.comment %>
-            </p>
-          </div>
-        <% end %>
-
-
+    <div id="review-list">
+     <%= render @product.reviews %>
+    </div>
 
 <!-- this is where you create a new review -->
     <h4>New Review</h4>
-
-    <%= render 'review_form' %>
+    <!-- render the review_form if current_user =/= nil -->
+    <%= render 'review_form' if current_user %>
 
 <% else %>
     <p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
