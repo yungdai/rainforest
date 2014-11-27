@@ -35,7 +35,8 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to product_path
+    # added @product to product_path() because passes the product ID back into the product ID path.
+    redirect_to product_path(@product)
   end
 
   private

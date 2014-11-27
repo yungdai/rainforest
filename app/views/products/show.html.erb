@@ -20,7 +20,23 @@
     <h4>New Review</h4>
     <!-- render the review_form if current_user =/= nil -->
     <%= render 'review_form' if current_user %>
-
+    <script type="text/javascript">
+        $(function() {
+            $("#new_review")
+                    .on('ajax:beforeSend', function() { // set this code to happen just before the ajax request is made
+                        $("input[type='submit']") // make changes to the submit button
+                                .val('Saving...') // change the text on the button
+                                .attr('disabled', 'disabled'); // disable the button
+                    })
+                    .on('ajax:complete', function() {
+                        $("input[type='submit']")
+                                .val('Create Review')
+                                .removeAttr('disabled');
+                    });
+        });
+    </script>
 <% else %>
     <p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
 <% end %>
+
+
