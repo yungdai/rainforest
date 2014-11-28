@@ -1,0 +1,12 @@
+<% @product.reviews.each do |review| %>
+    <p>
+    <div class="review">
+      <div class="poster">
+        Posted by <%= review.user %> on <% review.created_at %>
+      </div>
+      <p class="comment">
+        <%= review.comment %>
+      </p>
+    </div>
+   <%= link_to "Delete ", @product_review, method: :delete, data: {confirm: "Are you sure you want to delete this review?"} %>
+<% end %>

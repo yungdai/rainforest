@@ -35,8 +35,12 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
+<<<<<<< Updated upstream
     # added @product to product_path() because passes the product ID back into the product ID path.
     redirect_to product_path(@product)
+=======
+    redirect_to product_path
+>>>>>>> Stashed changes
   end
 
   private
